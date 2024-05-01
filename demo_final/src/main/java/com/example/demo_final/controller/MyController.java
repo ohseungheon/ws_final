@@ -16,7 +16,7 @@ public class MyController {
 	
 	@RequestMapping("/")
 	public String root() {
-		return "main";
+		return "index";
 	}
 
 	@RequestMapping("/list")
