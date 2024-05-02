@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import com.example.demo_final.dto.UserDto;
 
 @Mapper
-public interface IUserdao {
+public interface IUserDao {
 	public UserDto getUserInfo(String uno); 
 	public List<UserDto> getUserInfoList();
 	public int saveUserInfo(UserDto dto );

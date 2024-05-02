@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +23,22 @@
     h1 {
         color: #333;
     }
-    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
     a {
         text-decoration: none;
         color: #007bff;
@@ -52,12 +69,28 @@
 </style>
 </head>
 <body>
-    <h1>main page</h1>
-   
-    <br>
-    <a href="list">목록으로 가기</a><br>
+    <h1>write Form page</h1>
 
-
+    <form action="write" method="get">
+    <table border="1">
+    <tr>
+        <td>이름</td>
+        <td><input type="text" name ="name"></td>
+    </tr>
+    <tr>
+        <td>나이</td>
+        <td><input type="text" name ="age"></td>
+    </tr>
+    <tr>
+        <td>주소</td>
+        <td><input type="text" name ="addr"></td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="입력"></td>
+        <td><a href="list">목록보기</a></td>
+    </tr>
+    </form>
+</table>
 </body>
 </body>
 </html>

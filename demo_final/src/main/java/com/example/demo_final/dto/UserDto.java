@@ -11,6 +11,6 @@ public class UserDto {
 	private int uno;
 	private String name;
 	private int age;
-	private String adress;
+	private String addr;
 	
 }

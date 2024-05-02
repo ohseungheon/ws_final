@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +22,22 @@
     h1 {
         color: #333;
     }
-    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
     a {
         text-decoration: none;
         color: #007bff;
@@ -52,12 +68,25 @@
 </style>
 </head>
 <body>
-    <h1>main page</h1>
-   
-    <br>
-    <a href="list">목록으로 가기</a><br>
+    <h1>detail page</h1>
+    <table border="1">
+    <thead>
+        <td>번호</td>
+        <td>이름</td>
+        <td>나이</td>
+        <td>주소</td>
 
-
+    </thead>
+        
+        <tr>
+            <td>${dto.uno}</a></td>
+            <td>${dto.name}</a></td>
+            <td>${dto.age}</td>
+            <td>${dto.addr}</td>
+            
+        </tr>
+</table>
+<a href="writeForm">글작성</a>
 </body>
 </body>
 </html>

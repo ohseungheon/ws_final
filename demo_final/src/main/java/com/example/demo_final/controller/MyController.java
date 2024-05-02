@@ -6,17 +6,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demo_final.dao.IUserdao;
+import com.example.demo_final.dao.IUserDao;
 import com.example.demo_final.dto.UserDto;
 
 @Controller
 public class MyController {
 	@Autowired
-	IUserdao dao;
+	IUserDao dao;
 	
 	@RequestMapping("/")
 	public String root() {
-		return "index";
+		return "main";
 	}
 
 	@RequestMapping("/list")
